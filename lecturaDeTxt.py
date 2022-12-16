@@ -20,11 +20,15 @@ print(posiciones)
 for i in range(tamañoLista):
     cadena=listaFile[i]
 
-    listaLectura.append((cadena[0:posiciones[0]]).strip())
+    vector=[]
 
-    listaLectura.append((cadena[posiciones[0]+1:posiciones[1]]).strip())
+    vector.append(((cadena[0:posiciones[0]]).strip()))
+
+    vector.append(((cadena[posiciones[0]+1:posiciones[1]]).strip()))
     
-    listaLectura.append((cadena[posiciones[1]+1:posiciones[2]]).strip())
+    vector.append(((cadena[posiciones[1]+1:posiciones[2]]).strip()))
+
+    listaLectura.append(vector)
 
 print("-------INFORMACION-------")
 
@@ -39,5 +43,5 @@ print(len(listaLectura))
 #-------Muestro el PRIMER y ULTIMO elemento de la lista
 print("El PRIMER elemento es: ")
 print(listaLectura[0])
-print("El ULTIMO elemento es: ")
-print(listaLectura[11114])
+print("La X del primer elemento es: ")
+print(listaLectura[0][0])
